@@ -10,7 +10,7 @@ public class Box<T extends Fruit> implements Iterable<Fruit> {
         this.boxFruit = new ArrayList<>();
     }
     public T get(int numElem) {
-        return boxFruit.get(numElem);
+        return boxFruit.remove(numElem);
     }
 
     public void put(T item) {

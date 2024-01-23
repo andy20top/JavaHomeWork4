@@ -6,6 +6,13 @@ public class Main {
     public static void main(String[] args) {
         Box<Fruit> box = getFruitBox();
         printBox(box);
+        box.get(0);
+        System.out.println("________________________________");
+        printBox(box);
+        box.put(new Apple());
+        box.put(new Apple());
+        System.out.println("________________________________");
+        printBox(box);
 //        System.out.println(box.get(3));
     }
 
@@ -14,13 +21,6 @@ public class Main {
             Box<Fruit> fruitBox = new Box<>();
             fruitBox.put(new Apple());
             fruitBox.put(new Orange());
-            fruitBox.put(new Orange());
-            fruitBox.put(new Orange());
-            fruitBox.put(new Orange());
-            fruitBox.put(new Apple());
-            fruitBox.put(new Apple());
-            fruitBox.put(new Apple());
-            fruitBox.put(new Apple());
             return fruitBox;
        }
 
