@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -9,8 +8,8 @@ public class Box<T extends Fruit> implements Iterable<Fruit> {
     public Box() {
         this.boxFruit = new ArrayList<>();
     }
-    public T get(int numElem) {
-        return boxFruit.remove(numElem);
+    public T get() {
+        return boxFruit.remove(0);
     }
 
     public void put(T item) {

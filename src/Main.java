@@ -6,7 +6,9 @@ public class Main {
     public static void main(String[] args) {
         Box<Fruit> box = getFruitBox();
         printBox(box);
-        box.get(0);
+        Fruit fruit = box.get();
+        System.out.println("________________________________");
+        System.out.println("Из корзины получен фрукт: " + fruit);
         System.out.println("________________________________");
         printBox(box);
         box.put(new Apple());
