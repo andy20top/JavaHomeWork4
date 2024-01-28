@@ -6,4 +6,5 @@ public abstract class Fruit {
     }
 
     public abstract String toString();
+
 }

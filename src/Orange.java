@@ -1,4 +1,6 @@
 public class Orange extends Fruit {
+
+    String fruitVariety;
     public Orange() {
         super("Orange");
     }
@@ -7,4 +9,5 @@ public class Orange extends Fruit {
     public String toString() {
         return "Orange";
     }
+
 }

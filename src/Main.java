@@ -3,32 +3,28 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    /**
+     * В данной работе реализован принцип подстановки Лисков.
+     * Так как насколько видим, можем создавать разные объекты с родительским классом
+     * и они уживаются друг с другом в списке.
+     */
+
+    /**
+     * Также реализовал принцип единственной ответственности.
+     * Если у нас что-то поменяется в логике создания фруктовой корзины или
+     * вывода ее на экран. Мы можем это сделать, не изменяя методов в основных классах.
+     *
+     */
     public static void main(String[] args) {
-        Box<Fruit> box = getFruitBox();
-        printBox(box);
-        Fruit fruit = box.get();
-        System.out.println("________________________________");
-        System.out.println("Из корзины получен фрукт: " + fruit);
-        System.out.println("________________________________");
-        printBox(box);
-        box.put(new Apple());
-        box.put(new Apple());
-        System.out.println("________________________________");
-        printBox(box);
-//        System.out.println(box.get(3));
+        Box<Fruit> box = GetterFruitBox.getFruitBox();
+        Fruit apple = new Apple();
+        Fruit orange = new Orange();
+
+        box.put(apple);
+        box.put(orange);
+
+        System.out.println(box.get());
+        System.out.println("________________________");
+        Printer.printBox(box);
     }
-
-
-       public static Box<Fruit> getFruitBox() {
-            Box<Fruit> fruitBox = new Box<>();
-            fruitBox.put(new Apple());
-            fruitBox.put(new Orange());
-            return fruitBox;
-       }
-
-      public static void printBox(Box<? extends Fruit> box) {
-            for (Fruit item : box) {
-                System.out.println(item);
-            }
-      }
 }
